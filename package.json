@@ -1,0 +1,24 @@
+{
+  "name": "blog-fullstack",
+  "version": "1.0.0",
+  "description": "Angular, Js, Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bishk0/MEAN-Blog.git"
+  },
+  "keywords": [
+    "js",
+    "angular",
+    "node"
+  ],
+  "author": "Bishko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bishk0/MEAN-Blog/issues"
+  },
+  "homepage": "https://github.com/Bishk0/MEAN-Blog#readme"
+}
