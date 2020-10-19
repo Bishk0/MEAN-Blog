@@ -4,7 +4,19 @@
   "description": "Angular, Js, Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "dependencies": {
+    "bcrypt": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "nodemon": "^2.0.5",
+    "passport": "*",
+    "passport-jwt": "*"
   },
   "repository": {
     "type": "git",
