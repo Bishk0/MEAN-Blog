@@ -1,1 +1,17 @@
-<p>reg works!</p>
+<form class="form-signup container" (submit)="signUp()">
+  <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72"
+       height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+  <label for="inputName" class="sr-only">Name</label>
+  <input [(ngModel)]="name" name="name" type="text" id="inputName" class="form-control mb-1" placeholder="Name">
+  <label for="inputLogin" class="sr-only">Login</label>
+  <input [(ngModel)]="login" name="login" type="text" id="inputLogin" class="form-control mb-1" placeholder="Login">
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input [(ngModel)]="email" name="email" type="email" id="inputEmail" class="form-control mb-1" placeholder="Email address">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input [(ngModel)]="password" name="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+
+  <button class="btn btn-lg btn-primary btn-block mt-4" type="submit">Sign up</button>
+  <p class="mt-5 mb-3 text-muted">© 2020-2021</p>
+</form>
+
