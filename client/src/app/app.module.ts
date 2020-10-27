@@ -10,6 +10,9 @@ import { AuthComponent } from './auth/auth.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {FormsModule} from "@angular/forms";
 import {FlashMessagesModule} from "angular2-flash-messages";
+import {HttpModule} from "@angular/http";
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import {FlashMessagesModule} from "angular2-flash-messages";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

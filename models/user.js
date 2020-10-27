@@ -35,7 +35,7 @@ module.exports.getUserById = function (id, cb) {
 
 module.exports.addUser = function (newUser, cb) {
     bcrypt.genSalt(10, function (err, salt) {
-        bcrypt.hash(newUser.password, salt, function (err, salt) {
+        bcrypt.hash(newUser.password, salt, function (err, hash) {
             if (err) throw  err;
             newUser.password = hash;
             newUser.save(cb);
