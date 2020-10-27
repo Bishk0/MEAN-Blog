@@ -47,5 +47,5 @@ module.exports.comparePass = function (passFromUser, userDbPass, cb) {
     bcrypt.compare(passFromUser, userDbPass, (err, isMath) => {
         if (err) throw  err;
         cb(null, isMath);
-    })
+    });
 }

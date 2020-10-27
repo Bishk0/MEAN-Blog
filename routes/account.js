@@ -32,7 +32,7 @@ router.post('/auth', (req, res) => {
             return res.json({success: false, msg: 'This user was not found.'});
         }
 
-        User.comparePass(passport, user.password, (err, isMath) => {
+        User.comparePass(password, user.password, (err, isMath) => {
             if (err) throw  err;
             if (isMath) {
                 const token = jwt.sign(user.toJSON(), config.secret, {
