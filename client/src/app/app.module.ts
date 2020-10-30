@@ -8,11 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { RegComponent } from './reg/reg.component';
 import { AuthComponent } from './auth/auth.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {FormsModule} from "@angular/forms";
-import {FlashMessagesModule} from "angular2-flash-messages";
-import {HttpModule} from "@angular/http";
-
-
+import { FormsModule } from '@angular/forms';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { HttpModule } from '@angular/http';
+import { AuthService } from './shared/auth.service';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -21,16 +21,17 @@ import {HttpModule} from "@angular/http";
     HeaderComponent,
     RegComponent,
     AuthComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     FlashMessagesModule.forRoot(),
-    HttpModule
+    HttpModule,
+    QuillModule.forRoot()
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

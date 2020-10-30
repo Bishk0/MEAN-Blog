@@ -1,1 +1,32 @@
-<p>dashboard works!</p>
+<form class="form-signup container" (submit)="createPost()">
+  <h1 class="h3 mb-3 text-center font-weight-normal">Create post</h1>
+  <label for="category">Category:</label>
+  <select  [(ngModel)]="category" class="form-control mb-3" name="category" id="category">
+    <option value="World">World</option>
+    <option value="Technology">Technology</option>
+    <option value="Design">Design</option>
+    <option value="Culture">Culture</option>
+    <option value="Business">Business</option>
+    <option value="Opinion">Opinion</option>
+    <option value="Science">Science</option>
+    <option value="Health">Health</option>
+    <option value="Style">Style</option>
+    <option value="Travel">Travel</option>
+  </select>
+  <label for="inputTitle">Title</label>
+  <input
+    [(ngModel)]="title"
+    name="title"
+    type="text"
+    id="inputTitle"
+    class="form-control mb-3"
+    placeholder="Title"
+  />
+  <label for="photo">Photo:</label>
+  <quill-editor [(ngModel)]="photo" name="photo" id="photo" placeholder="Photo"></quill-editor>
+  <label cfor="information" class="mt-3">Information:</label>
+  <quill-editor [(ngModel)]="text" name="text" id="information" placeholder="Information"></quill-editor>
+  <button class="btn btn-lg btn-primary btn-block mt-4 mb-5" type="submit">
+    Create
+  </button>
+</form>

@@ -45,4 +45,11 @@ export class AuthService {
   isAuthenticated() {
     return tokenNotExpired()
   }
+
+  createPost(post) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/account/dashboard', post, {headers: headers})
+      .pipe(map(res => res.json()));
+  }
 }
