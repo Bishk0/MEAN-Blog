@@ -58,6 +58,19 @@ export class DashboardComponent implements OnInit {
       return false;
     }
 
-    
+    this.authService.createPost(post).subscribe(data => {
+      if (!data.success) {
+        this._flashMessagesService.show(data.msg, {
+          cssClass: 'alert-danger',
+          timeout: 3000,
+        });
+      } else {
+        this._flashMessagesService.show(data.msg, {
+          cssClass: 'alert-success',
+          timeout: 3000,
+        });
+        this.router.navigate(['/']);
+      }
+    })
   }
 }
