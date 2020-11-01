@@ -7,7 +7,9 @@ import { AuthService } from '../shared/auth.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+
   posts = [];
+  category;
 
   constructor(private authService: AuthService) {}
 
@@ -21,5 +23,9 @@ export class HomeComponent implements OnInit {
         }
       }
     );
+  }
+
+  setCategory(category) {
+    this.category = category;
   }
 }

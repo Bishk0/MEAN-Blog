@@ -14,6 +14,7 @@ import { HttpModule } from '@angular/http';
 import { AuthService } from './shared/auth.service';
 import { QuillModule } from 'ngx-quill';
 import { PostComponent } from './post/post.component';
+import { SortingPipe } from './shared/sorting.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { PostComponent } from './post/post.component';
     AuthComponent,
     DashboardComponent,
     PostComponent,
+    SortingPipe,
   ],
   imports: [
     BrowserModule,

@@ -5,4 +5,5 @@ export interface Post {
     text: string
     author: string
     date: string
+    _id: string
   }
