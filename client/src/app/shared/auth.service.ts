@@ -61,4 +61,17 @@ export class AuthService {
       .get('http://localhost:3000')
       .pipe(map((res) => res.json()));
   }
+
+  getPostById(id) {
+    return this.http
+      .get(`http://localhost:3000/post/${id}`)
+      .pipe(map((res) => res.json()));
+  }
+
+  deletePost(id) {
+    return this.http
+    .delete(`http://localhost:3000/post/${id}`)
+    .pipe(map((res) => res.json()));
+  }
+
 }
